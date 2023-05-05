@@ -3,7 +3,7 @@ module github.com/hudangwei/mojin-saver
 go 1.18
 
 require (
-	github.com/hudangwei/couchdb v0.0.0-20230427160336-814d73e278ce
+	github.com/hudangwei/couchdb v0.0.0-20230505075203-20a6281c7bec
 	github.com/joho/godotenv v1.5.1
 	github.com/kelseyhightower/envconfig v1.4.0
 	github.com/sirupsen/logrus v1.9.0
