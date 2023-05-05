@@ -68,8 +68,15 @@ func runSaveHttpxResultCmd(_ *cobra.Command, args []string) error {
 		info := &WebsiteInfo{
 			Type:        "website",
 			Program:     program,
+			Tags:        make(Tags),
 			HttpxResult: v,
 		}
+		info.Tags.AddTag("title", v.Title)
+		info.Tags.AddTag("webserver", v.WebServer)
+		info.Tags.AddTag("contenttype", v.ContentType)
+		info.Tags.AddTag("contentlength", fmt.Sprint(v.ContentLength))
+		info.Tags.AddTag("statuscode", v.StatusCode)
+		info.Tags.AddTag("tech", v.Technologies)
 		info.SetID(v.Url)
 		docs = append(docs, info)
 	}
@@ -130,6 +137,7 @@ type WebsiteInfo struct {
 	couchdb.Document
 	Type    string `json:"type"`
 	Program string `json:"program"`
+	Tags    Tags   `json:"tags"`
 	HttpxResult
 }
 
