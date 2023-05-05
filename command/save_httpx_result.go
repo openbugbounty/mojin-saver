@@ -67,6 +67,7 @@ func runSaveHttpxResultCmd(_ *cobra.Command, args []string) error {
 	for _, v := range results {
 		info := &WebsiteInfo{
 			Type:        "website",
+			Program:     program,
 			HttpxResult: v,
 		}
 		info.SetID(v.Url)
@@ -127,7 +128,8 @@ type TLS struct {
 
 type WebsiteInfo struct {
 	couchdb.Document
-	Type string `json:"type"`
+	Type    string `json:"type"`
+	Program string `json:"program"`
 	HttpxResult
 }
 

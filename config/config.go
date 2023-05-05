@@ -20,10 +20,11 @@ type (
 	}
 
 	CouchDB struct {
-		Host     string `envconfig:"COUCHDB_HOST"`
-		User     string `envconfig:"COUCHDB_USER"`
-		Password string `envconfig:"COUCHDB_PASSWORD"`
-		DBName   string `envconfig:"COUCHDB_DBNAME"`
+		Host                string `envconfig:"COUCHDB_HOST"`
+		User                string `envconfig:"COUCHDB_USER"`
+		Password            string `envconfig:"COUCHDB_PASSWORD"`
+		DBName              string `envconfig:"COUCHDB_DBNAME"`
+		DesignViewImportDir string `envconfig:"COUCHDB_DESIGNVIEWIMPORTDIR" default:"design"`
 	}
 )
 

@@ -14,9 +14,11 @@ import (
 
 var GlobalConfig config.Config
 var envfile string
+var program string
 
 func init() {
 	rootCmd.PersistentFlags().StringVarP(&envfile, "env-file", "", ".env", "Read in a file of environment variables")
+	rootCmd.PersistentFlags().StringVarP(&program, "program", "", "default", "项目名") //TODO:@INFER 根据项目inscope自动识别项目
 
 	cobra.OnInitialize(
 		initConfig,
@@ -61,6 +63,13 @@ func initLogging(c config.Config) {
 
 func initDB() {
 	db.GlobalCouchDB = couchdb.NewClient("http://"+GlobalConfig.CouchDB.Host, GlobalConfig.CouchDB.User, GlobalConfig.CouchDB.Password)
+	s := db.GlobalCouchDB.Use(GlobalConfig.CouchDB.DBName)
+	if designDocs, err := db.GlobalCouchDB.Parse(GlobalConfig.CouchDB.DesignViewImportDir); err == nil && len(designDocs) > 0 {
+		if err := s.Seed(designDocs); err != nil {
+			logger := logrus.WithError(err)
+			logger.Warnln("同步couchdb design view错误")
+		}
+	}
 }
 
 func Execute() {
