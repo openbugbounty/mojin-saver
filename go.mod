@@ -4,7 +4,7 @@ go 1.18
 
 require (
 	github.com/go-git/go-git/v5 v5.7.0
-	github.com/hudangwei/couchdb v0.0.0-20230605082651-320a01e4efa7
+	github.com/hudangwei/couchdb v0.0.0-20230605142247-98e98cdb8f41
 	github.com/joho/godotenv v1.5.1
 	github.com/kelseyhightower/envconfig v1.4.0
 	github.com/sirupsen/logrus v1.9.0
