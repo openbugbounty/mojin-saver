@@ -147,5 +147,6 @@ func SaveWebsiteInfo(docs []couchdb.CouchDoc) error {
 	}
 
 	s := db.GlobalCouchDB.Use(GlobalConfig.CouchDB.DBName)
-	return s.MultiStore(docs)
+	err, _, _ := s.MultiStore(docs)
+	return err
 }
