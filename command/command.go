@@ -5,9 +5,9 @@ import (
 	"os"
 
 	"github.com/hudangwei/couchdb"
-	"github.com/hudangwei/mojin-saver/config"
-	"github.com/hudangwei/mojin-saver/db"
 	"github.com/joho/godotenv"
+	"github.com/openbugbounty/mojin-saver/config"
+	"github.com/openbugbounty/mojin-saver/db"
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 )

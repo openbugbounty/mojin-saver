@@ -1,4 +1,4 @@
-module github.com/hudangwei/mojin-saver
+module github.com/openbugbounty/mojin-saver
 
 go 1.18
 

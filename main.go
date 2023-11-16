@@ -1,6 +1,6 @@
 package main
 
-import "github.com/hudangwei/mojin-saver/command"
+import "github.com/openbugbounty/mojin-saver/command"
 
 func main() {
 	command.Execute()

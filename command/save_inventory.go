@@ -12,7 +12,7 @@ import (
 	"github.com/go-git/go-git/v5"
 	"github.com/go-git/go-git/v5/plumbing"
 	"github.com/hudangwei/couchdb"
-	"github.com/hudangwei/mojin-saver/db"
+	"github.com/openbugbounty/mojin-saver/db"
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 )

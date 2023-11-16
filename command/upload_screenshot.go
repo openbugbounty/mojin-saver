@@ -8,7 +8,7 @@ import (
 	"path"
 
 	"github.com/hudangwei/couchdb"
-	"github.com/hudangwei/mojin-saver/db"
+	"github.com/openbugbounty/mojin-saver/db"
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 )

@@ -7,8 +7,8 @@ import (
 	"os"
 
 	"github.com/hudangwei/couchdb"
-	"github.com/hudangwei/mojin-saver/db"
-	"github.com/hudangwei/mojin-saver/util"
+	"github.com/openbugbounty/mojin-saver/db"
+	"github.com/openbugbounty/mojin-saver/util"
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 )

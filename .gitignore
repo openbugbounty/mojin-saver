@@ -27,3 +27,4 @@ pnpm-debug.log*
 .init.sh
 testdata
 mojin-saver
+mojin-saver.exe
